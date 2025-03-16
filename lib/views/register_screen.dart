@@ -41,11 +41,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      Image.asset('assets/images/store.png',height: MediaQuery.sizeOf(context).height*0.1,),
+                      Text(
+                        "Shop Hub",
+                        style: GoogleFonts.roboto(
+                          color: Color(0xFF0d120E),
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 0.2,
+                          fontSize: 20,
+                        ),
+                      ),
                       Text(
                         "Create Your Account",
                         style: GoogleFonts.roboto(
                           color: const Color(0xFF0d120E),
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w300,
                           letterSpacing: 0.2,
                           fontSize: 23,
                         ),
