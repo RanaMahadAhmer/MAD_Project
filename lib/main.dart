@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop_hub/views/login_screen.dart';
+import 'package:shop_hub/views/profile_screen.dart';
 import 'package:shop_hub/views/register_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => LoginScreen(),
         '/customer_register': (context) => RegisterScreen(),
+        '/profile': (context) => ProfileScreen(),
       },
     );
   }
@@ -52,6 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
             CircularProgressIndicator(),
             SizedBox(height: 20),
             Text('Loading...'),
+
           ],
         ),
       ),

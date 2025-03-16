@@ -37,22 +37,18 @@ class _CustomTextFieldState extends State<CustomTextField> {
           validator: widget.validator,
           obscureText: widget.isPassword ? _isObscure : false,
           controller: _controller,
+
+
           decoration: InputDecoration(
             fillColor: Colors.white,
             filled: true,
+            hintText: widget.label,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
             // focusedBorder: InputBorder.none,
             // enabledBorder: InputBorder.none,
             // errorBorder: InputBorder.none,
             // disabledBorder: InputBorder.none,
-            // labelText: widget.label,
-            labelStyle: GoogleFonts.getFont(
-              'Nunito Sans',
-              color: Color(0xFF7F909F),
-              fontSize: 14,
-              letterSpacing: 0.1,
-              height: 1.7,
-            ),
+
             prefixIcon: Padding(
                 padding: EdgeInsets.all(10.0), child: widget.prefixIcon),
             // contentPadding:
