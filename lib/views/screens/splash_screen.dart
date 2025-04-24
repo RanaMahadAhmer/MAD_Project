@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-
+import '../../animations/loading_dots.dart';
+import '../../animations/pulsating_logo.dart';
+import '../../animations/shimmer_text.dart';
 
 import 'authentication_screens/login_screen.dart';
 
@@ -63,7 +64,6 @@ class _SplashScreenState extends State<SplashScreen>
 
   void checkAuthState() {
     Get.offAll(() => LoginScreen());
-
   }
 
   @override
@@ -87,7 +87,11 @@ class _SplashScreenState extends State<SplashScreen>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Welcome To App")
+                    PulsatingLogo(),
+                    const SizedBox(height: 30),
+                    LoadingDots(),
+                    const SizedBox(height: 30),
+                    const ShimmerText('Welcome to Shop Hub'),
                   ],
                 ),
               ),
