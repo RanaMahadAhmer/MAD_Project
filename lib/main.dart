@@ -1,81 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_hub/views/login_screen.dart';
-import 'package:shop_hub/views/profile_screen.dart';
-import 'package:shop_hub/views/register_screen.dart';
+import 'package:flutter/services.dart';
+
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'package:get/get.dart';
+import 'package:shop_hub/views/screens/splash_screen.dart';
 
 
-void main() {
-  runApp(const MyApp());
+
+
+
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Shop Hub',
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+    );
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+
+          seedColor: Colors.deepPurple,
+        ),
         useMaterial3: true,
       ),
       home: const SplashScreen(),
-      routes: {
-        '/login': (context) => LoginScreen(),
-        '/customer_register': (context) => RegisterScreen(),
-        '/profile': (context) => ProfileScreen(),
-      },
+
     );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  void moveToLogin() {
-
-    Future.delayed(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, '/login');
-    });
-  }
-  @override
-  Widget build(BuildContext context) {
-    moveToLogin();
-    return SafeArea(child: Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-
-            Image.asset('assets/images/store.png',height: MediaQuery.sizeOf(context).height*0.1,),
-            Text(
-              "Shop Hub",
-              style: GoogleFonts.roboto(
-                color: Color(0xFF0d120E),
-                fontWeight: FontWeight.bold,
-                letterSpacing: 0.2,
-                fontSize: 20,
-              ),
-            ),
-            Text('Loading...',
-              style: GoogleFonts.roboto(
-                color: Color(0xFF0d120E),
-                fontSize: 14,
-                letterSpacing: 0.2,
-              )),
-            const SizedBox(height: 20),
-            const CircularProgressIndicator(),
-          ],
-        ),
-      ),
-    ));
   }
 }
