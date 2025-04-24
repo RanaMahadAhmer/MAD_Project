@@ -18,15 +18,9 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
 
   bool validate() {
-
-
     bool isEmailValid = RegExp(r'^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]').hasMatch(email);
-
-
     bool isPasswordValid = RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$&*]).{8,}$').hasMatch(password);
-
     if (email.isEmpty || password.isEmpty) {
-
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Email and password cannot be empty.'),
@@ -35,7 +29,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       return false;
     } else if (!isEmailValid) {
-
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Enter a valid email address.'),
@@ -44,7 +37,6 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       return false;
     } else if (!isPasswordValid) {
-
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Password must be at least 8 characters long, with one uppercase letter, one special character, and one number.'),
