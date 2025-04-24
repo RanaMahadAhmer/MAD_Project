@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "651885169153",
+    "project_id": "madproject-dd7a6",
+    "storage_bucket": "madproject-dd7a6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651885169153:android:f94eeab07b53dddba3ce00",
+        "android_client_info": {
+          "package_name": "com.example.shop_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCuZakhS3S7PU14u_kIU8symm30DyXlRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651885169153:android:543f9613958f7f56a3ce00",
+        "android_client_info": {
+          "package_name": "com.ranamahadahmer.shop_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCuZakhS3S7PU14u_kIU8symm30DyXlRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
